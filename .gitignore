@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pdb
+*.egg-info/
+*.egg
+*.log
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Django-specific
+*.sqlite3
+db.sqlite3
+*.pyc
+*.pyo
+*.pyd
+media/
+staticfiles/
+*.pot
+*.mo
+*.sql
+*.dump
+
+
+# Migrations (optional, можно исключить если хочешь контролировать миграции)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Environments & secrets
+.env
+.env.*
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# PyCharm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Docker
+*.pid
+*.pid.lock
+docker-compose.override.yml
+
+# Coverage, test and debug
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.coverage
+.cache
+nosetests.xml
+test-results/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# GitHub Actions
+.github/workflows/*.log
+
+.idea/workspace.xml
+postgres_data/
+
+
