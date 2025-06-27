@@ -4,22 +4,23 @@ This API was built as a test assignment for a backend internship at CodesCommand
 It’s a monolithic Django application with user management (registration, login, profile) and basic order handling.
 The app uses PostgreSQL and runs in a fully Dockerized environment.
 
-##  Features
+## Features
 
--  Custom user model with roles: **Admin**, **User**, **Moderator**
--  JWT-based authentication (`djangorestframework-simplejwt`)
--  Registration, login, logout, token refresh
--  Profile update and user list (admin)
--  Order creation, listing, updating, deleting (owner only)
--  Permissions for safe access (e.g., user can only modify own orders)
--  Pagination-ready setup
--  Admin panel support
--  Dockerized environment with PostgreSQL
+- Custom user model with roles: **Admin**, **User**, **Moderator**
+- JWT-based authentication (`djangorestframework-simplejwt`)
+- Registration, login, logout, token refresh
+- Profile update and user list (admin)
+- Order creation, listing, updating, deleting (owner only)
+- Permissions for safe access (e.g., user can only modify own orders)
+- Pagination-ready setup
+- Admin panel support
+- Dockerized environment with PostgreSQL
 
 ---
 
 ## Project Structure
 
+```bash
 monolith-for-CodesCommanders/
 ├── applications/
 │   ├── users/          # User app (models, views, serializers, permissions)
@@ -32,8 +33,7 @@ monolith-for-CodesCommanders/
 ├── .env                # Environment variables (excluded via .gitignore)
 ├── requirements.txt
 └── README.md
-
-
+```
 
 ---
 
@@ -51,12 +51,15 @@ monolith-for-CodesCommanders/
 ```bash
 git clone https://github.com/SvetlaPost/monolith-for-CodesCommanders.git
 cd monolith-for-CodesCommanders
+```
 
 ---
 
 ### 2. Set up .env
-Create a .env file in the root directory:
 
+Create a `.env` file in the root directory:
+
+```
 SECRET_KEY=your-secret-key
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
@@ -66,20 +69,25 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=postgres
 POSTGRES_HOST=db
 POSTGRES_PORT=5432
+```
 
 ---
 
 ### 3. Run via Docker
 
+```bash
 docker compose up --build
+```
 
 ---
 
 ### 4. Apply migrations and create superuser
 
+```bash
 docker compose exec web python manage.py makemigrations
 docker compose exec web python manage.py migrate
 docker compose exec web python manage.py createsuperuser
+```
 
 ---
 
@@ -94,16 +102,19 @@ docker compose exec web python manage.py createsuperuser
 | GET    | `/api/orders/`         | List all orders         |
 
 ---
+
 ### 6. Admin Access
 
-Visit http://localhost:8000/admin/
+Visit [http://localhost:8000/admin/](http://localhost:8000/admin/)  
 Login with your superuser credentials.
 
 ---
-### 7.Author
 
-Svetlana Postel
+### 7. Author
+
+**Svetlana Postel**  
 Test task for CodesCommanders internship program.
+
 
 
 
