@@ -21,18 +21,18 @@ The app uses PostgreSQL and runs in a fully Dockerized environment.
 ## Project Structure
 
 monolith-for-CodesCommanders/
-│
 ├── applications/
-│ ├── users/ # User app (models, views, serializers, permissions)
-│ └── orders/ # Order app (models, views, permissions)
+│   ├── users/          # User app (models, views, serializers, permissions)
+│   └── orders/         # Order app (models, views, permissions)
 │
-├── proj/ # Django core project (settings, URLs, wsgi)
+├── proj/               # Django project configuration (settings, URLs, WSGI)
 │
-├── Dockerfile # App Docker image
-├── docker-compose.yml # Full setup (PostgreSQL + Django)
-├── .env # Environment variables (excluded in .gitignore)
+├── Dockerfile          # App Docker image
+├── docker-compose.yml  # Full setup (PostgreSQL + Django)
+├── .env                # Environment variables (excluded via .gitignore)
 ├── requirements.txt
 └── README.md
+
 
 
 ---
